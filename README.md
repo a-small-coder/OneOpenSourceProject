@@ -7,5 +7,6 @@
 - grandcore.org - текущая вёрстка нашего проекта.
 
 ## Для запуска
+- cd (путь для репозитория)/grandcore.org
 - npm install
 - npm run start
