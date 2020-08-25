@@ -1,0 +1,13 @@
+@import "_helpers";
+@import "_header";
+@import "_main";
+
+*,
+*::before,
+*::after,
+body, html {
+  font-family: Inter;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

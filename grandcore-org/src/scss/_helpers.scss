@@ -1,0 +1,88 @@
+@import "_vars.scss";
+
+.overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    
+    &--hidden {
+        display: none;
+    }
+}
+
+.nav {
+    height: $nav-height;
+    padding: 10px;
+}
+
+.item {
+    font-size: 18px;
+    color: unset;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 36px;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: $green-dark;
+    background-color: $gray6;
+    cursor: pointer;
+    padding: 0.93333em;
+    border: none;
+    border-radius: $border-rad;
+    user-select: none;
+    font-weight: 600;
+
+    &--small {
+        display: block;
+        padding: inherit;
+        background-color: inherit;
+        border-radius: $border-rad;
+        z-index: 2;
+    }
+
+    &--big {
+        padding: 18px 30px 18px 30px;
+        font-size: 18px;
+    }
+
+    &--round {
+        border-radius: 50%;
+    }
+
+    &--green {
+        background-color: $green;
+        color: $green-dark;
+        &:hover {
+            background-color: lighten($green, 20%);
+        }
+    }
+
+    &--transparent {
+        background-color: transparentize($gray6, 0.7);
+        &:hover {
+            background-color: transparentize($gray6, 0.8); 
+        }
+    }
+}
+
+.img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 652px) {
+    .btn--big {
+        margin: 0.2em;
+        font-size: 12px;
+    }
+}

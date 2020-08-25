@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <link rel="shortcut icon" href="favicon/logo.svg" sizes="any" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.bundle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Второй заголовок | Проект</title>
+  </head>
+  <body>
+    <div class="overlay overlay--hidden"></div>
+    <div class="header-mobile-nav header-mobile-nav--hidden">
+      <div class="header-mobile-nav__close">
+        <button class="header-mobile-nav__close-btn btn btn-small" id="close-mobile-nav"></button>
+      </div>
+      <nav class="header-mobile-nav__nav">
+        <a class="header-mobile-nav__nav-item item" href="#"><b>Софт</b></a>
+        <a class="header-mobile-nav__nav-item item" href="#"><b>Игры</b></a>
+        <a class="header-mobile-nav__nav-item item" href="#"><b>Онлайн-сервисы</b></a>
+        <a class="header-mobile-nav__nav-item item" href="#"><b>Изделия</b></a>
+        <a class="header-mobile-nav__nav-item item" href="#"><b>Тексты</b></a>
+      </nav>
+      <nav class="header-mobile-nav__nav">
+        <a class="header-mobile-nav__nav-item item" href="#">О фонде</a>
+        <a class="header-mobile-nav__nav-item item" href="#">Спонсоры</a>
+        <a class="header-mobile-nav__nav-item item" href="#">Участники</a>
+      </nav>
+      <nav class="header-mobile-nav__nav"><a class="header-mobile-nav__signup-btn btn btn--green">Войти</a></nav>
+    </div>
+    <header class="header">
+      <div class="header-left-burger" id="burger-btn">
+        <label class="burger-toggle"
+          ><input type="checkbox" />
+          <div>
+            <div><span></span> <span></span></div>
+            <svg><use xlink:href="#path"></use></svg> <svg><use xlink:href="#path"></use></svg></div
+        ></label>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="path">
+            <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+          </symbol>
+        </svg>
+      </div>
+      <div class="header-left">
+        <a class="header-left__logo" href="#"></a>
+        <nav class="header-left__nav nav">
+          <a class="header-left__nav-item item" href="#">Софт</a>
+          <a class="header-left__nav-item item" href="#">Игры</a>
+          <a class="header-left__nav-item item" href="#">Онлайн-сервисы</a>
+          <a class="header-left__nav-item item" href="#">Изделия</a>
+          <a class="header-left__nav-item item" href="#">Тексты</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <nav class="header-right__nav">
+          <a class="header-right__nav-item item" href="#">О фонде</a>
+          <a class="header-right__nav-item item" href="#">Спонсоры</a>
+          <a class="header-right__nav-item item" href="#">Участники</a>
+        </nav>
+        <div class="header-right-btns">
+          <div class="header-right-btns__search">
+            <button
+              class="header-right-btns__search-btn header-right-btns__search-btn--action btn btn-small"
+              id="search-btn-action"
+            ></button>
+            <input
+              type="search"
+              class="header-right-btns__search-field search-field"
+              id="search-field"
+              placeholder="Поиск"
+            />
+            <button class="header-right-btns__close-btn btn btn-small" id="close-search-field"></button>
+          </div>
+          <button class="header-right-btns__more-btn btn btn--small" id="show-more"></button>
+          <button class="header-right-btns__search-btn btn btn-small" id="search-btn"></button>
+          <a class="header-right-btns__signup-btn btn btn--green" href="#">Войти</a>
+        </div>
+      </div>
+    </header>
+    <div class="container">Вторая страница.</div>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

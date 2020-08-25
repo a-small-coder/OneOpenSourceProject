@@ -1,0 +1,184 @@
+@import "_vars";
+
+.main {
+    &-content {
+        display: block;
+        margin-top: $nav-height;
+        z-index: 0;
+        &-header {
+            background: url(../img/contentHeaderBg.png) no-repeat;
+            background-size: cover;
+            min-width: 100vw;
+            width: 100%;
+            height: 860px;
+            &-row {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                padding: 1.5rem 20rem;
+                height: 40%;
+                &__h1 {
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 72px;
+                    line-height: 108%;
+                    letter-spacing: -0.02em;
+                    color: $white;
+                    width: 100%;
+                }
+            }
+            &-col {
+                display: flex;
+                justify-content: center;
+                padding: 0rem 20rem;
+                height: 60%;
+                &-1 {
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+                    &__h3 {
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 28px;
+                        line-height: 160%;
+                        color: $white;
+                    }
+                    &-btns {
+                        display: flex;
+                        justify-content: flex-start;
+                        margin-top: 95px;
+                        & > .btn:not(:first-child) {
+                            margin-left: 32px;
+                        }
+                    }
+                }
+                &-2 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 30%;
+                    #play-video {
+                        display: inherit;
+                        justify-content: center;
+                        align-items: center;
+                        width: 164px;
+                        height: 164px;
+                        &::after {
+                            display: block;
+                            content: '';
+                            background: url(../img/play.svg) no-repeat;
+                            width: 43.71px;
+                            height: 72px;
+                            margin-left: 13px;
+                        }
+                    }
+                    .play-video-btn-label {
+                        font-weight: 800;
+                        font-style: normal;
+                        font-size: 18px;
+                        letter-spacing: 0.02em;
+                        text-transform: uppercase;
+                        color: $gray6;
+                        text-align: center;
+                        opacity: 0.9;
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Ноутбуки
+@media only screen and (max-width: 1679px) {
+    .main {
+        &-content {
+            &-header {
+                &-row {
+                    padding: 1.5rem 10rem;
+                }
+                &-col {
+                    padding: 0rem 10rem;
+                }
+            }
+        }
+    }
+}
+// Планшеты
+@media only screen and (max-width: 1380px) {
+    .main {
+        &-content {
+            &-header {
+                &-row {
+                    padding: 1.5rem 5rem;
+                }
+                &-col {
+                    padding: 0rem 5rem;
+                }
+            }
+        }
+    }
+}
+// Телефоны
+@media only screen and (max-width: 990px) {
+    .main {
+        &-content {
+            margin-top: $nav-height-mb;
+            &-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-position: left left;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                &-row {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 3rem 5rem;
+                    height: 30%;
+                    &__h1 {
+                        font-size: 48px;
+                    }
+                }
+                &-col {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 70%;
+                    padding: 0rem 5rem;
+                    &-1 {
+                        width: 100%;
+                        &__h3 {
+                            font-size: 26px;
+                        }
+                        &-btns {
+                            justify-content: center;
+                            margin-bottom: 30px;
+                        }
+                    }
+                    &-2 {
+                        margin-top: 80px;
+                        justify-content: center;
+                        width: 100%;
+                        #play-video {
+                            width: 82px;
+                            height: 82px;
+                            &::after {
+                                display: block;
+                                content: '';
+                                background: url(../img/play-small.svg) no-repeat;
+                                width: 21.86px;
+                                height: 36px;
+                                margin-left: 7px;
+                            }
+                        }
+                        .play-video-btn-label {
+                            margin-top: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
