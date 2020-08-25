@@ -1,0 +1,43 @@
+<% var data = {
+    title: "О фонде",
+    author: "Xannotas"
+  }; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="about">
+  <div class="about-sidebar">
+    <ol>
+      <li class="active">Ранняя история</li>
+      <li>Модель
+        <ol>
+          <li>Интерфейс пользователя</li>
+        </ol>
+      </li>
+      <li>Реализация</li>
+      <li>Программирование в Linux</li>
+      <li>Применение
+        <ol>
+          <li>Серверы, рабочие станции и суперкомпьютеры</li>
+          <li>Игровые приставки</li>
+          <li>Встраиваемые системы</li>
+        </ol>
+      </li>
+      <li>Применение в госструктурах</li>
+      <li>Дистрибутивы Linux
+        <ol>
+          <li>Приспособленность к роли настольной операционной системы</li>
+        </ol>
+      </li>
+      <li>Критическая кампания</li>
+      <li>Примечания</li>
+      <li>Литература</li>
+      <li>Ссылки</li>
+    </ol>
+  </div>
+
+  <div class="about-content">
+    <h2>Прими участие в создании информационной и промышленной альтернативы!</h2>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

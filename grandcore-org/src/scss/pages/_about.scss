@@ -1,0 +1,35 @@
+@import "../vars";
+
+.about {
+    margin-top: 50px + $nav-height; // temporary
+    display: flex;
+    padding: 0 20rem;
+
+    &-sidebar {
+        width: 33%;
+        margin-top: 20px;
+        margin-right: 20px;
+
+        ol {
+            list-style: none; 
+            counter-reset: li;
+            margin-left: 20px;
+            li {
+                margin: 20px 0;
+                color: $gray3;
+                font-weight: 300;
+                cursor: pointer;
+
+                &:before {
+                    counter-increment: li; 
+                    content: counters(li,".") " "; 
+                }
+
+                &.active {
+                    color: $gray1;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
