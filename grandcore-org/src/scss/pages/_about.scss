@@ -39,6 +39,7 @@
             $self: &;
             margin-bottom: 80px;
             &__title {
+                padding: 0 1rem 0 0;
                 width: 75%;
                 color: $gray1;
                 font-weight: 900;
@@ -60,7 +61,6 @@
             &--grid4 {
                 display: flex;
                 flex-wrap: wrap;
-                margin-bottom: 0;
             }
 
             &--item {
@@ -78,6 +78,81 @@
                             color: $blue;
                             text-decoration: none;
                             margin-bottom: 16px;
+                        }
+                    }
+                }
+
+                &:nth-last-child(1),
+                &:nth-last-child(2) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .about {
+        padding: 0 10rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .about {
+        padding: 0 5rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .about {
+        margin-top: 100px;
+        flex-direction: column;
+        padding: 0 3rem;
+        &-sidebar {
+            margin-top: 0;
+            margin-bottom: 20px;
+            
+            ol {
+                li {
+                    margin: 14px 0;
+                }
+            }
+        }
+        &-content {
+            &-block {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .about {
+        padding: 0 1rem;
+        margin-top: 70px;
+        flex-direction: column;
+        
+        &-content {
+            &-block {
+                $self: &;
+                margin-bottom: 20px;
+
+                &__title {
+                    width: 100%;
+                    font-size: 20px;
+                }
+
+                &--grid4 {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+
+                    #{$self} {
+                        width: 100%;
+                        text-align: center;
+                        &__content{ 
+                            a {
+                                margin-bottom: 8px;
+                            }
                         }
                     }
                 }
