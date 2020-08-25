@@ -6,7 +6,8 @@
     padding: 0 20rem;
 
     &-sidebar {
-        width: 33%;
+        min-width: 35%;
+        width: 100%;
         margin-top: 20px;
         margin-right: 20px;
 
@@ -28,6 +29,132 @@
                 &.active {
                     color: $gray1;
                     font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &-content {
+        &-block {
+            $self: &;
+            margin-bottom: 80px;
+            &__title {
+                padding: 0 1rem 0 0;
+                width: 75%;
+                color: $gray1;
+                font-weight: 900;
+                font-size: 24px;
+                margin-bottom: 36px;
+            }
+            &__content {
+                color: $gray2;
+                line-height: 25px;
+
+                .accent--green {
+                    color: $green
+                }
+                p+p{
+                    margin: 16px 0;
+                }
+            }
+
+            &--grid4 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &--item {
+                width: 50%;
+                margin-bottom: 40px;
+                #{$self} {
+                    &__title {
+                        width: 100%;
+                        margin-bottom: 16px;
+                    }
+
+                    &__content {
+                        a {
+                            display: block;
+                            color: $blue;
+                            text-decoration: none;
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+
+                &:nth-last-child(1),
+                &:nth-last-child(2) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .about {
+        padding: 0 10rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .about {
+        padding: 0 5rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .about {
+        margin-top: 100px;
+        flex-direction: column;
+        padding: 0 3rem;
+        &-sidebar {
+            margin-top: 0;
+            margin-bottom: 20px;
+            
+            ol {
+                li {
+                    margin: 14px 0;
+                }
+            }
+        }
+        &-content {
+            &-block {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .about {
+        padding: 0 1rem;
+        margin-top: 70px;
+        flex-direction: column;
+        
+        &-content {
+            &-block {
+                $self: &;
+                margin-bottom: 20px;
+
+                &__title {
+                    width: 100%;
+                    font-size: 20px;
+                }
+
+                &--grid4 {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+
+                    #{$self} {
+                        width: 100%;
+                        text-align: center;
+                        &__content{ 
+                            a {
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
                 }
             }
         }
