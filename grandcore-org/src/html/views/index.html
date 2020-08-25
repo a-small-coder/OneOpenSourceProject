@@ -3,5 +3,32 @@
   author: "Harrix"
 }; %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
-<%= _.template(require('./../includes/main.html').default)(data) %>
+
+<div class="main">
+   <div class="main-content">
+        <section class="main-content-header img">
+           <div class="main-content-header-row">
+               <h1 class="main-content-header-row__h1">
+                  Демократическая платформа полного цикла
+               </h1>
+           </div>
+            <div class="main-content-header-col">
+               <div class="main-content-header-col-1">
+                  <h3 class="main-content-header-col-1__h3">
+                     Найдите единомышленников и работайте над любыми открытыми проектами вместе
+                  </h3>
+                  <div class="main-content-header-col-1-btns">
+                     <a class="btn btn--big">Предложить проект</a>
+                     <a class="btn btn--big btn--green">Стать спонсором</a>
+                  </div>
+               </div>
+               <div class="main-content-header-col-2">
+                  <button class="btn btn--round btn--transparent" id="play-video"></button>
+                  <label class="play-video-btn-label" for="#play-video">Смотреть видео</label>
+               </div>
+            </div>
+        </section>
+   </div> 
+</div>
+
 <%= _.template(require('./../includes/footer.html').default)(data) %>

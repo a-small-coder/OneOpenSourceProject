@@ -1,0 +1,87 @@
+@import "../vars";
+
+.about {
+    margin-top: 50px + $nav-height; // temporary
+    display: flex;
+    padding: 0 20rem;
+
+    &-sidebar {
+        min-width: 35%;
+        width: 100%;
+        margin-top: 20px;
+        margin-right: 20px;
+
+        ol {
+            list-style: none; 
+            counter-reset: li;
+            margin-left: 20px;
+            li {
+                margin: 20px 0;
+                color: $gray3;
+                font-weight: 300;
+                cursor: pointer;
+
+                &:before {
+                    counter-increment: li; 
+                    content: counters(li,".") " "; 
+                }
+
+                &.active {
+                    color: $gray1;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &-content {
+        &-block {
+            $self: &;
+            margin-bottom: 80px;
+            &__title {
+                width: 75%;
+                color: $gray1;
+                font-weight: 900;
+                font-size: 24px;
+                margin-bottom: 36px;
+            }
+            &__content {
+                color: $gray2;
+                line-height: 25px;
+
+                .accent--green {
+                    color: $green
+                }
+                p+p{
+                    margin: 16px 0;
+                }
+            }
+
+            &--grid4 {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+            }
+
+            &--item {
+                width: 50%;
+                margin-bottom: 40px;
+                #{$self} {
+                    &__title {
+                        width: 100%;
+                        margin-bottom: 16px;
+                    }
+
+                    &__content {
+                        a {
+                            display: block;
+                            color: $blue;
+                            text-decoration: none;
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
