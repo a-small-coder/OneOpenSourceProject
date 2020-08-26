@@ -1,0 +1,241 @@
+@import "../vars";
+
+.main {
+    &-content {
+        display: block;
+        margin-top: $nav-height;
+        z-index: 0;
+        &-header {
+            background: url(../../img/list_header.png) no-repeat;
+            background-size: cover;
+            min-width: 100vw;
+            width: 100%;
+            height: 300px;
+            &-row {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                padding: 1rem 20rem;
+                height: 51%;
+                &__h1 {
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 60px;
+                    line-height: 108%;
+                    letter-spacing: -0.02em;
+                    color: $white;
+                    width: 100%;
+                }
+            }
+            &-col {
+                display: flex;
+                justify-content: start;
+                padding: 0rem 20rem;
+                height: 60%;
+                &-1 {
+                    display: flex;
+                    flex-direction: column;
+                    width: 47%;
+                    &__h3 {
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 24px;
+                        line-height: 160%;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &-wrapper {
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            background-color: $gray6;
+            width: 100%;
+            padding: 5rem 18rem;
+            &-filters {    
+                min-width: 15rem;
+                width: 22%;
+                padding: 0rem;
+                height: 500px;
+                &__h3 {
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 24px;
+                    line-height: 160%;
+                }
+            }
+            &-conteiner {
+                width: 62.5rem;
+                padding: 0.5rem;
+                &-top {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 50px;
+                    margin-bottom: 2.5rem;
+                    &-search {
+                        width: 60%;
+                        background-color: $gray5;
+                        &-btn {
+                            display: flex;
+                            width: 20%;
+                            padding: 0.8rem;
+                            &-icon {
+                                background: url(../img/search.svg);
+                                width: 20px;
+                                height: 20px;
+                            }
+                            &-text {
+                                font-style: normal;
+                                font-size: 16px;
+                                line-height: 100%;
+                                color: $gray2;
+                                margin: 0.2rem 0.6rem;
+                                
+                            }
+                        }
+                    }
+                    &-makefilter {
+                        width: 17.75rem;
+                        background-color: $gray5;
+                        display: flex;
+                        padding: 0.8rem;
+                        &-icon {
+                            background: url(../img/search.svg) no-repeat;
+                            width: 30px;
+                            height: 30px;
+                        }
+                        &-text {
+                            font-style: normal;
+                            font-size: 16px;
+                            line-height: 100%;
+                            color: $gray2;
+                            margin: 0.2rem 0.6rem;
+                            
+                        }
+                    }
+                }
+                &-row {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    &-col {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 19.7rem;
+                        min-width: 15rem;
+                        background-color: $white;
+                        border-radius: 4px;
+                        margin-bottom: 3.8rem;
+                        &-imgconteiner {
+                            border-radius: 4px;
+                            &-img {
+                                border-radius: 4px;
+                                width: 19.7rem;
+                                height: 10rem;
+                                object-fit: cover;
+                                position: absolute;
+                            }
+                            
+                        }
+                        &-text {
+                            margin-top: 8.5rem ;
+                            padding: 1.25rem;
+                            letter-spacing: -0.02em;
+                            h4 {
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: 18px;
+                                padding: 1rem 0;
+                                line-height: 100%;
+                                color: $gray1;
+                            }
+                            p {
+                                font-size: 14px;
+                                font-style: normal;
+                                line-height: 140%;
+                                color: $gray2;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// Ноутбуки
+@media only screen and (max-width: 1679px) {
+    .main {
+        &-content {
+            &-header {
+                &-row {
+                    padding: 1.5rem 10rem;
+                }
+                &-col {
+                    padding: 0rem 10rem;
+                }
+            }
+        }
+    }
+}
+// Планшеты
+@media only screen and (max-width: 1380px) {
+    .main {
+        &-content {
+            &-header {
+                &-row {
+                    padding: 1.5rem 5rem;
+                }
+                &-col {
+                    padding: 0rem 5rem;
+                }
+            }
+        }
+    }
+}
+// Телефоны
+@media only screen and (max-width: 990px) {
+    .main {
+        &-content {
+            margin-top: $nav-height-mb;
+            &-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-position: left left;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                &-row {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 3rem 5rem;
+                    height: 30%;
+                    &__h1 {
+                        font-size: 48px;
+                    }
+                }
+                &-col {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 70%;
+                    padding: 0rem 5rem;
+                    &-1 {
+                        width: 100%;
+                        &__h3 {
+                            font-size: 26px;
+                        }
+                        &-btns {
+                            justify-content: center;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
