@@ -53,16 +53,36 @@
             background-color: $gray6;
             width: 100%;
             padding: 5rem 18rem;
-            &-filters {    
-                min-width: 15rem;
-                width: 22%;
+            &-sidebar {    
+                width: 15%;
                 padding: 0rem;
-                height: 500px;
-                &__h3 {
+                margin-right: 7rem;
+                margin-bottom: 3.8rem;
+                &-filters {
+                    &-section-title {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        padding: 1rem 0;
+                        line-height: 100%;
+                        color: $gray2;
+                        ul {
+                            padding: 0 1rem;
+                            font-weight: normal;
+                            color: grey3;
+                            li {
+                                margin: 0.75rem;
+                            }
+                        }
+                    }
+                }
+                &__h2 {
                     font-style: normal;
                     font-weight: 800;
                     font-size: 24px;
                     line-height: 160%;
+                    color: $gray1;
+                    letter-spacing: -0.02em;
                 }
             }
             &-conteiner {
@@ -120,6 +140,23 @@
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
+                    &-download {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 4rem;
+                        &-btn {
+                            width: 11rem;
+                            height: 4rem;
+                            background-color: $green;
+                            border-radius: 6px;
+                            text-align: center;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 100%;
+                            color: $green-dark;
+                        }
+                    }
                     &-col {
                         display: flex;
                         flex-wrap: wrap;
